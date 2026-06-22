@@ -1,28 +1,11 @@
 import streamlit as st
-import os
+
 # Konfigurasi halaman wajib di paling atas
 st.set_page_config(
     page_title="Operational Command Center | Data Analytics",
     page_icon="⚙️",
     layout="wide"
 )
-
-# Header Eksekutif
-st.title("⚙️ Supply Chain & Retail Analytics Hub")
-st.markdown("---")
-st.error("🚨 MODE DEBUG AKTIF: Membedah Isi Server")
-st.write("**1. Posisi Direktori Saat Ini (Working Directory):**", os.getcwd())
-
-st.write("**2. Apa saja file dan folder yang ada di lokasi ini?**")
-st.write(os.listdir())
-
-if os.path.isdir('datasets'):
-    st.write("**3. Folder 'datasets' DITEMUKAN. Ini isinya:**")
-    st.write(os.listdir('datasets'))
-else:
-    st.error("❌ FOLDER 'datasets' TIDAK DITEMUKAN oleh mesin di lokasi ini!")
-
-st.stop()
 # Pesan Pengantar
 st.markdown("""
 ### **Mengubah Data Mentah Menjadi Keputusan Operasional**
