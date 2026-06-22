@@ -22,7 +22,7 @@ Sistem otomasi dan analitik ini dirancang khusus untuk mengeliminasi *human erro
 
 # Informasi Kontak & Profesionalisme
 st.info("""
-**Dikembangkan oleh:** Donny Pranata| B.Eng in Informatics Engineering  
+**Dikembangkan oleh:** Donny Pranata| Bachelor in Informatics Engineering  
 *Fokus pada efisiensi prosedural, validasi 'zero-error', dan otomasi data.*
 """)
 
