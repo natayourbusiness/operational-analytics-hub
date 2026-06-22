@@ -9,14 +9,6 @@ st.title("📈 Advanced Sales & Revenue Analytics")
 st.markdown("Audit performa penjualan komprehensif menggunakan analisis Pareto dan deteksi anomali transaksi.")
 st.markdown("---")
 
-if os.path.isdir('datasets'):
-    st.write("**3. Folder 'datasets' DITEMUKAN. Ini isinya:**")
-    st.write(os.listdir('datasets'))
-else:
-    st.error("❌ FOLDER 'datasets' TIDAK DITEMUKAN oleh mesin di lokasi ini!")
-
-st.stop()
-
 @st.cache_data
 def load_sales_data():
     df = pd.read_csv('datasets/sales_data_sample.csv', encoding='latin1')
