@@ -2,12 +2,26 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 import io
+import os
 
 st.set_page_config(page_title="Sales Analytics", page_icon="📈", layout="wide")
 
 st.title("📈 Advanced Sales & Revenue Analytics")
 st.markdown("Audit performa penjualan komprehensif menggunakan analisis Pareto dan deteksi anomali transaksi.")
 st.markdown("---")
+st.error("🚨 MODE DEBUG AKTIF: Membedah Isi Server")
+st.write("**1. Posisi Direktori Saat Ini (Working Directory):**", os.getcwd())
+
+st.write("**2. Apa saja file dan folder yang ada di lokasi ini?**")
+st.write(os.listdir())
+
+if os.path.isdir('datasets'):
+    st.write("**3. Folder 'datasets' DITEMUKAN. Ini isinya:**")
+    st.write(os.listdir('datasets'))
+else:
+    st.error("❌ FOLDER 'datasets' TIDAK DITEMUKAN oleh mesin di lokasi ini!")
+
+st.stop()
 
 @st.cache_data
 def load_sales_data():
